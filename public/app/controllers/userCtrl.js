@@ -1,1 +1,5 @@
-angular.module('userCtrl', []);
+angular.module('userCtrl', ['userService'])
+
+.controller('userController', function(User){
+
+});

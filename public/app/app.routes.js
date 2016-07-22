@@ -1,14 +1,14 @@
 angular.module('app.routes', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/admin');
 
     $stateProvider
 
-        .state('admin', {
+        .state('login', {
             url: '/admin',
             templateUrl: 'app/views/pages/login.html',
-            controller: 'mainController'
+            controller: 'mainController as login'
         });
 
 });

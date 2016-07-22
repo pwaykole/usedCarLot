@@ -20,13 +20,16 @@ angular.module('mainCtrl', ['authService'])
 
    // function to handle login form
    vm.doLogin = function() {
-
+    // clear the error
+     vm.error = '';
      // call the Auth.login() function
      Auth.login(vm.loginData.username, vm.loginData.password)
        .success(function(data) {
-
          // if a user successfully logs in, redirect to users page
-         $location.path('/users');
+         if (data.success)
+             $location.path('/users');
+         else
+             vm.error = data.message;
        });
    };
 

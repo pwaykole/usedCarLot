@@ -1,34 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="carLot">
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Angular Material style sheet -->
+    <meta charset="UTF-8">
+    <title>Used Car Lot</title>
+    <!-- FOR ANGULAR ROUTING -->
+    <base href="/">
+    <!-- CSS  -->
+    <!-- load bootstrap from CDN and custom CSS -->
     <link rel="stylesheet" href="../../assets/css/angular-material.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/style.css"> </head>
 
-<body>
-
+<body ng-app="userApp">
     <div ui-view></div>
-
-    <!-- Angular Material requires Angular.js Libraries -->
+    <!-- JS -->
+    <!-- load angular and angular-route via CDN -->
     <script src="../../assets/libs/angular.js"></script>
+    <script src="../../assets/libs/angular-ui-router.js"></script>
     <script src="../../assets/libs/angular-animate.js"></script>
     <script src="../../assets/libs/angular-aria.js"></script>
     <script src="../../assets/libs/angular-messages.js"></script>
-    <!-- Angular Material Library -->
     <script src="../../assets/libs/angular-material.js"></script>
-    <!--UI Router-->
-    <script src="../../assets/libs/angular-ui-router.js"></script>
+    <script src="../../assets/libs/angular-material-icons.min.js"></script>
     <!-- controllers -->
-    <script src="../controllers/mainCtrl.js"></script>
-    <script src="../controllers/userCtrl.js"></script>
+    <script src="app/controllers/mainCtrl.js"></script>
+    <script src="app/controllers/userCtrl.js"></script>
     <!-- services -->
-    <script src="../services/authService.js"></script>
-    <script src="../services/userService.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/userService.js"></script>
     <!-- main Angular app files -->
-    <script src="../app.routes.js"></script>
-    <script src="../app.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.js"></script>
 </body>
+
 </html>
