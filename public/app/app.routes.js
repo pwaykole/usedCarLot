@@ -15,10 +15,10 @@ angular.module('app.routes', ['ui.router'])
             templateUrl: 'app/views/pages/login.html',
             controller: 'mainController as login'
         })
-        .state('Users', {
-            url: '/Users',
+        .state('users', {
+            url: '/users',
             templateUrl: 'app/views/pages/users/all.html',
-            controller: 'userController'
+            controller: 'userController as user'
         });
 
 });
