@@ -9,9 +9,8 @@
             <md-toolbar class="md-table-toolbar md-default" ng-hide="options.rowSelection && selected.length">
                 <div class="md-toolbar-tools"> <span>Nutrition</span>
                     <div flex></div>
-                     <md-button class="md-icon-button">
-                        <md-icon>add</md-icon>
-                    </md-button>
+                    <button md-icon-button md-button ng-click="createUser($event)" class="md-raised md-primary">
+                        <md-icon class="material-icons">add</md-icon> Create User </button>
                     <md-button class="md-icon-button" ng-click="loadStuff()">
                         <md-icon>refresh</md-icon>
                     </md-button>
@@ -39,8 +38,20 @@
                             <td md-cell>{{person._id}}</td>
                             <td md-cell>{{person.name}}</td>
                             <td md-cell>{{person.username}}</td>
-                            <td md-cell><md-button class="md-icon-button" id="edit"><a ng-href="/users/{{ person._id }}"><md-icon>edit</md-icon></a></md-button></td>
-                            <td md-cell><md-button class="md-icon-button" id="edit"><a href="#" ng-click="user.deleteUser(person._id)"><md-icon>delete</md-icon></a></md-button></td>
+                            <td md-cell>
+                                <md-button class="md-icon-button" id="edit">
+                                    <a ng-href="/users/{{ person._id }}">
+                                        <md-icon>edit</md-icon>
+                                    </a>
+                                </md-button>
+                            </td>
+                            <td md-cell>
+                                <md-button class="md-icon-button" id="edit">
+                                    <a href="#" ng-click="user.deleteUser(person._id)">
+                                        <md-icon>delete</md-icon>
+                                    </a>
+                                </md-button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

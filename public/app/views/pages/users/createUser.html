@@ -1,0 +1,38 @@
+<md-dialog aria-label="Create User" ng-cloak flex="30">
+    <form name="createUser" ng-submit="user.saveUser()">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Create User</h2> <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon>clear</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Name</label>
+                        <input type="text" ng-model="user.userData.name">
+                    </md-input-container>
+                </div>
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Username</label>
+                        <input type="text" ng-model="user.userData.username">
+                    </md-input-container>
+                </div>
+                <div layout-lg="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Password</label>
+                        <input type="password" ng-model="user.userData.password">
+                    </md-input-container>
+                </div>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row"> <span flex></span>
+            <md-button ng-click="cancel()" class="md-raised md-warn"> Cancel </md-button>
+            <md-button type="submit" class="md-raised md-primary"> Save </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
