@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// log all requests to the console 
+// log all requests to the console
 app.use(morgan('dev'));
 
 // connect to our database (on local host name of database is mean-machine)
@@ -41,7 +41,11 @@ app.use(express.static(__dirname + '/public'));
 var apiRoutes = require('./app/routes/api')(app, express);
 app.use('/api', apiRoutes);
 
-// MAIN CATCHALL ROUTE --------------- 
+// API ROUTES FOR CARS------------------------
+var apiCarRoutes = require('./app/routes/carsApi')(app, express);
+app.use('/carsApi', apiCarRoutes);
+
+// MAIN CATCHALL ROUTE ---------------
 // SEND USERS TO FRONTEND ------------
 // has to be registered after API ROUTES
 app.get('*', function (req, res) {

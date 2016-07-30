@@ -1,1 +1,41 @@
-Hello
+<md-toolbar class="md-hue-2 md-whiteframe-4dp">
+    <div class="md-toolbar-tools">
+        <spsn flex="75"></spsn>
+        <md-button id="edit"> <a>Home</a> </md-button>
+        <md-button id="edit"> <a>About us</a> </md-button>
+        <md-button id="edit"> <a>Contact</a> </md-button>
+    </div>
+</md-toolbar>
+<div layout="row" class="slider-section">
+    <div flex="20"></div>
+    <div flex="50">
+        <h2>OUR SPECIAL OFFERS</h2>
+        <hr>
+        <div layout="row" layout-xs="column">
+            <md-card layout="center" class="md-whiteframe-4dp" flex>
+                <jk-carousel data="dataArray" item-template-url="'../../app/views/pages/item-template.html'" max-width="800" max-height="500" auto-slide="true" auto-slide-time="2000"> </jk-carousel>
+            </md-card>
+        </div>
+    </div>
+    <div flex="30" style="padding-left:20px;">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <span>Latest Ads</span>
+            </div>
+         </md-toolbar>
+         <md-content>
+            <md-list flex="">
+                <md-subheader class="md-no-sticky">Our latest cars's ready to be yours</md-subheader>
+                    <md-list-item class="md-3-line" ng-repeat="item in todos" ng-click="null">
+                      <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}">
+                      <div class="md-list-item-text" layout="column">
+                        <h3>{{ item.who }}</h3>
+                        <h4>{{ item.what }}</h4>
+                        <p>{{ item.notes }}</p>
+                      </div>
+                    </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+    <div flex="20"></div>
+</div>
