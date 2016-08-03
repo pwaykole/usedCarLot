@@ -1,5 +1,5 @@
 module.exports = {
     'port': process.env.PORT || 8080, 
-    'database': 'mongodb://localhost/mean-machine', 
+    'database': 'mongodb://localhost/usedcarlot', 
     'secret': 'ilovewhiskyandthebestoneisjdhoney'
 };

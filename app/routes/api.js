@@ -17,7 +17,7 @@ module.exports = function (app, express) {
         // select the password explicitly since mongoose is not returning it by default
         User.findOne({
             username: req.body.username
-        }).select('password').exec(function (err, user) {
+        }).select('username password firstname lastname emailaddress menus').exec(function (err, user) {
 
             if (err) throw err;
 
@@ -48,7 +48,8 @@ module.exports = function (app, express) {
                     res.json({
                         success: true,
                         message: 'Enjoy your token!',
-                        token: token
+                        token: token,
+                        user: user
                     });
                 }
 

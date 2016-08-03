@@ -18,7 +18,14 @@ angular.module('app.routes', ['ui.router'])
         .state('users', {
             url: '/users',
             templateUrl: 'app/views/pages/users/all.html',
-            controller: 'userController as user'
+            controller: 'userController as user',
+            authenticated: true
+        })
+        .state('dashboard', {
+            url: '/dashboard',
+            templateUrl: 'app/views/pages/dashboard/dashboard.html',
+            controller: 'dashboardController as dashboard',
+            authenticated: true
         });
 
 });
