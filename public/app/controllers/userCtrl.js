@@ -87,7 +87,7 @@ angular.module('userCtrl', ['ngMaterial', 'md.data.table', 'userService']).confi
         });
     };
 
-    function DialogController($scope, $mdDialog) {
+    function DialogController($scope, $mdDialog, $root) {
         $scope.hide = function () {
             $mdDialog.hide();
         };
@@ -100,7 +100,6 @@ angular.module('userCtrl', ['ngMaterial', 'md.data.table', 'userService']).confi
 
     // function to create a user
     $scope.saveUser = function () {
-        console.log("in the function");
         $scope.processing = true;
         // clear the message
         var message = '';
@@ -112,7 +111,8 @@ angular.module('userCtrl', ['ngMaterial', 'md.data.table', 'userService']).confi
             $scope.userData = {};
             message = data.message;
             $mdToast.show($mdToast.simple().textContent(message).position(pinTo).hideDelay(3000));
+            $mdDialog.cancel();
         });
-    };
+      };
     };
 }]);

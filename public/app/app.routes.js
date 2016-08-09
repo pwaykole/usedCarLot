@@ -7,8 +7,22 @@ angular.module('app.routes', ['ui.router'])
 
         .state('home', {
             url: '/',
+             resolve: {
+                latestCars: ['cars',
+                    function(cars) {
+                    return cars.getLatestCars();
+                }],
+                allCars:['cars', function(cars){
+                    return cars.getCarNames();
+                }]
+        },
             templateUrl: 'app/views/pages/home.html',
             controller: 'homeController as home'
+        })
+        .state('contact', {
+            url: '/contact',
+            templateUrl: 'app/views/pages/contact.html',
+            controller: 'contactController as cf'
         })
         .state('admin', {
             url: '/admin',

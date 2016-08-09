@@ -1,6 +1,5 @@
-angular
+angular.module('userApp', ['app.routes', 'authService', 'mainCtrl', 'userCtrl', 'userService', 'ngMaterial','ngMessages','hmeCtrl','jkAngularCarousel', 'dashboardCtrl', 'userAvatarDirective', 'authService', 'accountService', 'ngStorage', 'carService','contactCtrl','underscore'])
 
-.module('userApp', ['app.routes', 'authService', 'mainCtrl', 'userCtrl', 'userService', 'ngMaterial','ngMessages','hmeCtrl','jkAngularCarousel', 'dashboardCtrl', 'userAvatarDirective', 'authService', 'accountService', 'ngStorage'])
 .run(function ($rootScope, Account, $location) {
   // google analytics
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -16,7 +15,7 @@ angular
     $location.path(toState.url);
   })
 })
-// application configuration to integrate token into requests
+// application configuration to integrate token into requests and also theme for material design
  .config(function($httpProvider, $mdThemingProvider) {
  // attach our auth interceptor to the http requests
  $httpProvider.interceptors.push('AuthInterceptor');

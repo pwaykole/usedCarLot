@@ -315,7 +315,10 @@ md-autocomplete {
   height: 40px;
   position: relative;
   overflow: visible;
-  min-width: 190px; }
+  min-width: 190px;
+  border: 2px solid #26c6da;
+
+}
   md-autocomplete[disabled] input {
     cursor: default; }
   md-autocomplete[md-floating-label] {

@@ -17,7 +17,8 @@
     "jsonwebtoken": "^7.1.6",
     "mongoose": "^4.5.4",
     "morgan": "^1.7.0",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "nodemailer": "^2.5.0"
   },
   "devDependencies": {}
 }

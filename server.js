@@ -28,6 +28,7 @@ app.use(function (req, res, next) {
 app.use(morgan('dev'));
 
 // connect to our database (on local host name of database is mean-machine)
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
 // set static files location
@@ -44,6 +45,10 @@ app.use('/api', apiRoutes);
 // API ROUTES FOR CARS------------------------
 var apiCarRoutes = require('./app/routes/carsApi')(app, express);
 app.use('/carsApi', apiCarRoutes);
+
+//API Route for Contact
+var apiContactRoute = require('./app/routes/contactApi')(app, express);
+app.use('/contactApi', apiContactRoute);
 
 // MAIN CATCHALL ROUTE ---------------
 // SEND USERS TO FRONTEND ------------

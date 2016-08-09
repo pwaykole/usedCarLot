@@ -1,0 +1,45 @@
+<md-toolbar class="md-hue-2 md-whiteframe-4dp">
+    <div class="md-toolbar-tools">
+          <spsn flex="10"></spsn>
+          <h1><span>ABC DEALERSHIP</span></h1>
+        <spsn flex="60"></spsn>
+        <md-button id="edit" ui-sref="home"> <a>Home</a> </md-button>
+        <md-button id="edit"> <a>About us</a> </md-button>
+        <md-button id="edit" ui-sref="contact"> <a>Contact</a></md-button>
+    </div>
+</md-toolbar>
+
+<div layout="column" layout-align="center center" layout-fill="layout-fill" class="inputdemoIcons">
+    <div layout="column" class="contactbox md-whiteframe-z1">
+            <md-toolbar>
+                <h2 class="md-toolbar-tools"><span class="md-toolbar-color">Contact</span></h2>
+            </md-toolbar>
+        <form name="contactForm" ng-submit="doSendMail()">
+            <md-content layout="column" class="md-padding">
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Name</label>
+                    <md-icon class="material-icons md-24">person</md-icon>
+                    <input ng-model="cf.data.name" type="text" ng-required="true">
+                 </md-input-container>
+                <md-input-container class="md-block">
+                    <md-icon class="material-icons md-24">phone</md-icon>
+                    <input ng-model="cf.data.phone" type="text" placeholder="Phone Number" ng-required="true">
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <!-- Use floating placeholder instead of label -->
+                     <md-icon class="material-icons md-24">mail</md-icon>
+                    <input ng-model="cf.data.email" type="email" placeholder="Email (required)" ng-required="true">
+                 </md-input-container>
+                <md-input-container class="md-block">
+                    <md-icon class="material-icons md-24">place</md-icon>
+                    <input ng-model="cf.data.address" type="text" placeholder="Address" ng-required="true">
+                </md-input-container>
+                 <div layout="row" layout-align="center center">
+                        <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+                        <div flex="flex"></div>
+                </div>
+            </md-content>
+        </form>
+    </div>
+</div>

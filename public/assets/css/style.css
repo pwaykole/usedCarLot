@@ -36,14 +36,42 @@
 .dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
   margin-bottom: 0; }
 
-
-
-
-
-
-
-
-
 .slider-section {
     margin-top: 2%;
+}
+
+ .inputdemoIcons .inputIconDemo {
+     min-height: 48px;
+ }
+
+ .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
+     color: green;
+ }
+
+ .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
+     color: dodgerblue;
+ }
+
+ .inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
+ .inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
+     color: red;
+ }
+
+.md-24 {
+    font-size: 24px;
+    margin-top: 2px;
+}
+
+.contactbox {
+  max-width:  100%;;
+  width: 800px;
+  margin-top: 5%;
+}
+
+.homesearch {
+    margin-top:2%
+}
+
+.searchbtn {
+    margin-top: 0.85%;
 }

@@ -19,7 +19,16 @@ module.exports = function (app, express) {
          // get all the Cars
         .get(function (req, res) {
 
-            Cars.find().limit(10).sort({ index: -1 }).exec(function(err, data){
+            Cars.find().limit(6).sort({ index: -1 }).exec(function(err, data){
+                res.json(data);
+            });
+        });
+
+     carApiRouter.route('/cars/allCars')
+         // get all the Cars
+        .get(function (req, res) {
+            Cars.find().select('make').exec(function(err, data){
+                 if (err) return handleError(err);
                 res.json(data);
             });
         });
